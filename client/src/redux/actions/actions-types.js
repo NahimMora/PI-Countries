@@ -1,0 +1,5 @@
+export const GET_COUNTRIES = "GET_COUNTRIES"
+export const GET_COUNTRY = "GET_COUNTRY" 
+export const GET_COUNTRY_NAME = "GET_COUNTRY_NAME"
+export const PAGINATOR = "PAGINATOR"
+export const SORT_ALFABETIC = "SORT_ALFABETIC"
