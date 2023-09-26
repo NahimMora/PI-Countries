@@ -1,10 +1,10 @@
 const { Activity } = require("../db");
 const axios = require("axios");
 
-const newActivity = async (name, difficulty, duration, season) => {
+const newActivity = async (name, difficulty, duration, season, countries) => {
 
     const newActivity = await Activity.create({
-        name, difficulty, duration, season
+        name, difficulty, duration, season, countries
     })
 
     return newActivity

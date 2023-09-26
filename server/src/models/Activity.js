@@ -25,5 +25,9 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      countries: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: false
+      }
   });
 };

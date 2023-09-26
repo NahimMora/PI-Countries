@@ -2,10 +2,10 @@ const { newActivity, allActivity } = require("../controllers/activityControllers
 
 const postActivity = async (req, res) => {
 
-  const {name, difficulty, duration, season} = req.body
+  const {name, difficulty, duration, season, countries} = req.body
 
     try {
-    const result = await newActivity(name, difficulty, duration, season)
+    const result = await newActivity(name, difficulty, duration, season, countries)
       res.status(201).json(result);
     } catch (error) {
       res.status(404).json({ error: error.message });

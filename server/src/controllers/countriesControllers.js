@@ -20,9 +20,7 @@ const apiClean = async () => {
 }
 
 const allCountries = async () => {
-    
     return await apiClean()
-    
 }
 
 const idCountry = async (id) => {
