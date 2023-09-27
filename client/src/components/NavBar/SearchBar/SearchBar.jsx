@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Style from './SearchBar.module.css'
+
 import {useDispatch} from 'react-redux'
 import { getCountryName } from '../../../redux/actions/actions';
 
@@ -14,7 +16,10 @@ const SearchBar = () => {
 
   return (
     <>
-        <input type="text" name='search' value={input} onChange={handleChange}/>
+    <div className={Style.searchBar}>
+        <div className={Style.searchIcon}>🔍</div>
+        <input type="text" name='search' value={input} onChange={handleChange} placeholder='Search...' className={Style.searchInput}/>
+    </div>
     </>
   )
 }

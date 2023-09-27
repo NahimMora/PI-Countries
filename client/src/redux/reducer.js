@@ -1,11 +1,16 @@
-import { GET_COUNTRIES, GET_COUNTRY, GET_COUNTRY_NAME, PAGINATOR, SORT_ALFABETIC } from "./actions/actions-types";
+import { FILTER_CONTINENT, GET_COUNTRIES, GET_COUNTRY, GET_COUNTRY_NAME, PAGINATOR, SORT_ALFABETIC, SORT_POPULATION, RESET_FILTERS } from "./actions/actions-types";
 
 const initialState = {
     allCountries: [],
     filteredCountries: [],
     backupCountries: [],
     country: {},
-    currentPage: 0
+    currentPage: 0,
+    activeFilters: {
+        continent: null,
+        alphabeticalSort: null,
+        populationSort: null,
+    }
 };
 
 function rootReducer(state = initialState, action) {
@@ -29,31 +34,29 @@ function rootReducer(state = initialState, action) {
         case GET_COUNTRY_NAME:
             return {
                 ...state,
-                allCountries: action.payload,
-                filteredCountries: action.payload.slice(0, itemsPerPage)
+                allCountries: action.payload.slice(0, itemsPerPage),
+                filteredCountries: action.payload,
+                currentPage: 0
             };
 
-            case PAGINATOR:
-                const next_page = state.currentPage + 1;
-                const prev_page = state.currentPage - 1;
-                const firstIndex = action.payload === "next" ? next_page * itemsPerPage : prev_page * itemsPerPage;
+        case PAGINATOR:
+            const next_page = state.currentPage + 1;
+            const prev_page = state.currentPage - 1;
+            const firstIndex = action.payload === "next" ? next_page * itemsPerPage : prev_page * itemsPerPage;
             
-                if (action.payload === "next" && firstIndex >= state.backupCountries.length) return state;
-                if (action.payload === "prev" && prev_page < 0) return state;
+            if (action.payload === "next" && firstIndex >= state.filteredCountries.length) return state;
+            if (action.payload === "prev" && prev_page < 0) return state;
             
-                const filteredCountries = state.filteredCountries.length > 0 ? state.filteredCountries : state.backupCountries;
+            const filteredCountries = state.filteredCountries.length > 0 ? state.filteredCountries : state.backupCountries;
             
-                const newAllCountries = filteredCountries.slice(firstIndex, firstIndex + itemsPerPage);
+            return {
+                ...state,
+                allCountries: filteredCountries.slice(firstIndex, firstIndex + itemsPerPage),
+                currentPage: action.payload === "next" ? next_page : prev_page
+            };
             
-                return {
-                    ...state,
-                    allCountries: newAllCountries,
-                    currentPage: action.payload === "next" ? next_page : prev_page
-                };
-            
-
         case SORT_ALFABETIC:
-            const sortedCountries = [...state.backupCountries];
+            const sortedCountries = [...state.filteredCountries];
             if (action.payload === "Ascending") {
                 sortedCountries.sort((a, b) => a.name.localeCompare(b.name));
             } else {
@@ -63,8 +66,63 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 allCountries: sortedCountries.slice(0, itemsPerPage),
-                filteredCountries: sortedCountries
+                filteredCountries: sortedCountries,
+                currentPage: 0,
+                activeFilters: {
+                    ...state.activeFilters,
+                    alphabeticalSort: action.payload
+                }
             };
+
+        case SORT_POPULATION:
+
+            const populationCountries = [...state.filteredCountries];
+            if (action.payload === "Ascending"){
+              populationCountries.sort((a, b) => a.population - b.population);
+            } else {
+              populationCountries.sort((a, b) => b.population - a.population)
+            }
+
+            return {
+              ...state,
+              allCountries: populationCountries.slice(0, itemsPerPage),
+              filteredCountries: populationCountries,
+              currentPage: 0,
+              activeFilters: {
+                ...state.activeFilters,
+                populationSort: action.payload
+              }
+            }
+              
+        case FILTER_CONTINENT:
+
+        const continentCountries = [...state.filteredCountries].filter(c => {
+            return c.continents[0] === action.payload;
+          });
+
+          return {
+            ...state,
+            allCountries: [...continentCountries].slice(0, itemsPerPage),
+            filteredCountries: [...continentCountries],
+            currentPage: 0,
+            activeFilters: {
+                ...state.activeFilters,
+                continent: action.payload
+            }
+          };
+
+        case RESET_FILTERS:
+            return {
+                ...state,
+                allCountries: [...state.backupCountries].splice(0, itemsPerPage),
+                filteredCountries: [...state.backupCountries],
+                currentPage: 0,
+                activeFilters: {
+                    continent: null,
+                    alphabeticalSort: null,
+                    populationSort: null
+                }
+            }
 
         default:
             return state;

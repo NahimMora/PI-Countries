@@ -1,0 +1,40 @@
+.sorts button {
+    background-color: #7b41c5;
+    height: 40px;
+    margin-top: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sorts button:last-child {
+    margin-right: 0;
+}
+
+.sorts button:hover {
+    box-shadow: 0 0 5px #C900FF;
+}
+
+.sorts select {
+    background-color: #7b41c5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sorts select:hover {
+    box-shadow: 0 0 5px #C900FF;
+}

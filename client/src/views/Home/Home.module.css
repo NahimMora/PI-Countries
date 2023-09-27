@@ -1,0 +1,21 @@
+.home {
+    background-color: #10002b;
+    margin: 0%;
+}
+
+.filterSort {
+    display: flex ;
+    flex-direction: row;
+    
+}
+
+.filterDesactive {
+    color: #ecbcfd;
+    display: flex;
+    flex-direction: column;
+}
+
+.filterActive {
+    text-shadow: 0 0 20px #C900FF;
+    color: white;
+}

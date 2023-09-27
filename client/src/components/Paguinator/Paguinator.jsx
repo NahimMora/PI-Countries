@@ -1,8 +1,10 @@
 import React from 'react'
+import Style from './Paguinator.module.css'
+
 import { useDispatch } from 'react-redux'
 import { paginator } from '../../redux/actions/actions'
 
-const Paguinator = () => {
+const Paguinator = ({page, maxPage}) => {
 
     const dispatch = useDispatch()
 
@@ -16,10 +18,11 @@ const Paguinator = () => {
 
   return (
     <>
-        <div>Paguinator</div>
+      <div className={Style.paginator}>
         <button name='prev' onClick={handlePrevClick}>prev</button>
-        <span></span>
+        <span>{page}/{maxPage}</span>
         <button name='next' onClick={handleNextClick}>next</button>
+      </div>
     </>
   )
 }

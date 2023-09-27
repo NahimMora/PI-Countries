@@ -1,0 +1,33 @@
+/* Paguinator.module.css */
+
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .paginator button {
+    background-color: #7b41c5; /* Fondo morado */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    transition: box-shadow 0.2s; /* Transición para la sombra */
+  }
+  
+  .paginator button:hover {
+    box-shadow: 0 0 10px #C900FF; /* Sombra violeta al pasar el mouse */
+  }
+  
+  .paginator span {
+    color: #fff; /* Texto blanco */
+    font-size: medium;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  

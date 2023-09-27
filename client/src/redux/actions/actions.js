@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {GET_COUNTRIES, GET_COUNTRY, GET_COUNTRY_NAME, PAGINATOR, SORT_ALFABETIC} from './actions-types'
+import {GET_COUNTRIES, GET_COUNTRY, GET_COUNTRY_NAME, PAGINATOR, SORT_ALFABETIC, SORT_POPULATION, FILTER_CONTINENT, RESET_FILTERS} from './actions-types'
 
 
 export function getCountries () {
@@ -69,6 +69,32 @@ export function sortAlfabetic (order) {
         dispatch({
             type: SORT_ALFABETIC,
             payload: order
+        })
+    }
+}
+
+export function sortPopulation (order) {
+    return function(dispatch){
+        dispatch({
+            type: SORT_POPULATION,
+            payload: order
+        })
+    }
+}
+
+export function filterContinent (continent) {
+    return function (dispatch) {
+        dispatch({
+            type: FILTER_CONTINENT,
+            payload: continent
+        })
+    }
+}
+
+export function resetFilters () {
+    return function (dispatch) {
+        dispatch({
+            type: RESET_FILTERS
         })
     }
 }

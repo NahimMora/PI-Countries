@@ -1,0 +1,28 @@
+.searchBar {
+    background-color: #000;
+    border: 2px solid #C900FF;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.searchBar:focus-within {
+    box-shadow: 0 0 10px #C900FF;
+}
+
+.searchInput {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchIcon {
+    margin-right: 5px;
+    font-size: 20px;
+    color: #fff;
+}
