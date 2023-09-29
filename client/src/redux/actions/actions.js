@@ -1,5 +1,19 @@
 import axios from 'axios'
-import {GET_COUNTRIES, GET_COUNTRY, GET_COUNTRY_NAME, PAGINATOR, SORT_ALFABETIC, SORT_POPULATION, FILTER_CONTINENT, RESET_FILTERS} from './actions-types'
+import {
+    GET_COUNTRIES, 
+    GET_COUNTRY, 
+    GET_COUNTRY_NAME, 
+    GET_ACTIVITYS,
+
+    PAGINATOR, 
+
+    SORT_ALFABETIC, 
+    SORT_POPULATION, 
+
+    FILTER_CONTINENT, 
+    FILTER_ACTIVITY,
+    RESET_FILTERS
+} from './actions-types'
 
 
 export function getCountries () {
@@ -11,7 +25,7 @@ export function getCountries () {
                 payload: response.data
             })
         } catch (error) {
-            console.log(error);
+            alert(`Error: ${error.response.data.error}`);
         }
     }
 }
@@ -40,6 +54,20 @@ export function getCountryName (name) {
             })
         } catch (error) {
             alert(`Error: ${error.response.data.error}`)
+        }
+    }
+}
+
+export function getActivitys () {
+    return async function (dispatch) {
+        try {
+            const response = await axios.get('http://localhost:3001/activities')
+            dispatch({
+                type: GET_ACTIVITYS,
+                payload: response.data
+        })
+        } catch (error) {
+            alert(`Error: ${error.response.data.error}`);
         }
     }
 }
@@ -87,6 +115,15 @@ export function filterContinent (continent) {
         dispatch({
             type: FILTER_CONTINENT,
             payload: continent
+        })
+    }
+}
+
+export function filterActivity (activity) {
+    return function (dispatch) {
+        dispatch({
+            type: FILTER_ACTIVITY,
+            payload: activity
         })
     }
 }

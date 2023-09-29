@@ -13,7 +13,10 @@ const apiClean = async () => {
         capital: d.capital,
         subregion: d.subregion,
         area: d.area,
-        population: d.population
+        population: d.population,
+        lenguaje: d.languages,
+        googleMaps: d.maps.googleMaps,
+        nameEnter: d.name.official
     }
 })
     return data

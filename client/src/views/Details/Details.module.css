@@ -1,0 +1,91 @@
+.details {
+    background-color: #10002b;
+    height: 100%;
+}
+
+.details a {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: larger;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, text-shadow 0.2s; 
+}
+
+.details a:hover {
+    color: #b892ff;
+    transform: scale(1.05); 
+    text-shadow: 0 0 5px #C900FF; 
+}
+
+.details h2 {
+    color: #f3c4fb;
+    text-shadow: 0 0 5px #C900FF; 
+    font-size: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.info h3 {
+    margin-left: 10px;
+    color: #deaaff;
+    text-shadow: 0 0 5px #C900FF;
+    font-weight: bold;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos en el centro horizontalmente */
+    text-align: center; /* Alinea el texto en el centro horizontalmente */
+    margin-bottom: 0; /* Elimina el margen inferior para que no haya espacio en blanco */
+}
+
+.names h1 {
+    color: #deaaff;
+    text-shadow: 0 0 5px #C900FF; 
+    font-size: 125px;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 0; /* Elimina el margen inferior para que el h3 quede justo debajo */
+    margin-top: 0;
+}
+
+.names h3 {
+    color: #deaaff;
+    text-shadow: 0 0 5px #C900FF; 
+    font-size: 24px; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    margin: 10px 0; /* Añade margen en la parte superior e inferior para separarlo del h1 */
+
+}
+
+.names h2 {
+    color: #f3c4fb;
+    text-shadow: 0 0 5px #C900FF; 
+    font-size: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.names img {
+    border: 1px solid black;
+    width: 700px;
+    margin-right: 50px;
+    max-height: 430px;
+    box-shadow: 0 0 10px #C900FF;
+    margin-bottom: 0;
+}
+
+.info2 a {
+    font-size: 120px;
+}

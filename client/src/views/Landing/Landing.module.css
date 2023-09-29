@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(16, 0, 43, 0.5), rgba(16, 0, 43, 0.5)), url('./countries.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* Estilo para el elemento .h1a (parte izquierda) */
+.h1a {
+  flex: 1; /* Ocupa todo el espacio disponible en la parte izquierda */
+  display: flex; /* Utilizamos flexbox para centrar verticalmente */
+  flex-direction: column;
+  justify-content: center; /* Centramos verticalmente el contenido */
+  align-items: flex-start; /* Alineamos a la izquierda horizontalmente */
+  margin-left: 20px; /* Agregamos margen izquierdo */
+}
+
+.h1a h1 {
+  color: #fff;
+  text-shadow: 0 0 20px #c900ff;
+  font-size: 100px;
+  margin: 0;
+}
+
+.h1a a {
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, text-shadow 0.2s; 
+  margin-top: 30px;
+  position: relative; /* Añade posición relativa para posicionar la línea */
+}
+
+/* Estilo para los enlaces cuando el mouse está sobre ellos */
+.h1a a:hover {
+  color: #b892ff;
+  transform: scale(1.05); 
+  text-shadow: 0 0 5px #C900FF;
+  margin-top: 30px; 
+  border-bottom: 2px solid #C900FF; /* Agregar una línea fucsia debajo del texto */
+}
+
+.h1a p {
+  margin: 0;
+  color: #b892ff;
+  font-size: large;
+  text-shadow: 0 0 20px #c900ff;
+}
+
+/* Estilo para las cards (parte derecha) */
+.cards {
+  flex: 1; /* Ocupa todo el espacio disponible en la parte derecha */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Ocupa el 50% del ancho disponible en la parte derecha */
+  background-color: #240046;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 0 20px #c900ff;
+  opacity: 0; /* Comienza con opacidad 0 */
+}
+
+/* Estilo para el título de la tarjeta */
+.cardTitle {
+  background-color: #10002b;
+  color: #fff;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-shadow: 0 0 20px #c900ff;
+}
+
+/* Estilo para el texto de la tarjeta */
+.cardText {
+  margin: 0;
+}
+
+/* Estilo para tarjetas visibles */
+.visible {
+  opacity: 1; /* Opacidad completa cuando es visible */
+}

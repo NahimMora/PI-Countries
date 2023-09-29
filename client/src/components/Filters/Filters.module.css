@@ -14,5 +14,24 @@
 }
 
 .filter select:hover {
-    box-shadow: 0 0 5px #C900FF; /* Sombra violeta al pasar el mouse */
+    box-shadow: 0 0 15px #C900FF; /* Sombra violeta al pasar el mouse */
+}
+
+.inputs button {
+        background-color: #7b41c5; /* Fondo morado */
+        color: #fff; /* Texto blanco */
+        border: none;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-family: Arial, sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones para efectos */
+        margin-right: 20px; /* Margen a la derecha para separarlo del resto de elementos */
+    
+}
+.inputs button :hover {
+    box-shadow: 0 0 15px #C900FF; /* Sombra violeta al pasar el mouse */
 }

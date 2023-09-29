@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 15%;
-    min-height: 30% ;
+    height: 375px;
     margin: 20px;
     background-color: #3c096c;
     border: 1px solid black;
@@ -19,6 +19,7 @@
 
 .img-container {
     position: relative;
+    height: 40%;
 }
 
 .img {
@@ -35,10 +36,12 @@
     margin-left: 5px;
     height: 125px;
     font-family: Arial, Helvetica, sans-serif;
+    height: 60%;
 }
 
 .info h1 {
     text-align: center;
+    text-shadow: 0 0 20px #C900FF;
 }
 
 .info h2 {

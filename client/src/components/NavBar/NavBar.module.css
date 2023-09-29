@@ -4,14 +4,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    box-shadow: 0 0 20px #C900FF; 
 }
 
 .searchBar {
     margin-right: 20px;
+    text-shadow: 0 0 20px #C900FF; 
 }
 
 .nav img {
     width: 50px;
+    box-shadow: 0 0 10px #C900FF; 
 }
 
 .nav a {

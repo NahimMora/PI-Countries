@@ -1,15 +1,33 @@
-import { FILTER_CONTINENT, GET_COUNTRIES, GET_COUNTRY, GET_COUNTRY_NAME, PAGINATOR, SORT_ALFABETIC, SORT_POPULATION, RESET_FILTERS } from "./actions/actions-types";
+import { 
+    GET_COUNTRIES, 
+    GET_COUNTRY, 
+    GET_COUNTRY_NAME, 
+    GET_ACTIVITYS,
+
+    PAGINATOR, 
+
+    SORT_ALFABETIC, 
+    SORT_POPULATION, 
+
+    FILTER_CONTINENT, 
+    FILTER_ACTIVITY,
+    RESET_FILTERS, 
+} from "./actions/actions-types";
 
 const initialState = {
     allCountries: [],
     filteredCountries: [],
     backupCountries: [],
     country: {},
+
+    activitys: [],
+
     currentPage: 0,
     activeFilters: {
         continent: null,
         alphabeticalSort: null,
         populationSort: null,
+        activity: null
     }
 };
 
@@ -38,6 +56,12 @@ function rootReducer(state = initialState, action) {
                 filteredCountries: action.payload,
                 currentPage: 0
             };
+
+        case GET_ACTIVITYS:
+            return {
+                ...state,
+                activitys: action.payload
+            }
 
         case PAGINATOR:
             const next_page = state.currentPage + 1;
@@ -111,6 +135,24 @@ function rootReducer(state = initialState, action) {
             }
           };
 
+          case FILTER_ACTIVITY:
+
+            const activityCountries = [...state.filteredCountries].filter(c => {
+                return action.payload.includes(c.name);
+            });
+        
+            return {
+                ...state,
+                allCountries: [...activityCountries].slice(0, itemsPerPage),
+                filteredCountries: [...activityCountries],
+                currentPage: 0,
+                activeFilters: {
+                    ...state.activeFilters,
+                    activity: action.payload
+                }
+            };
+        
+
         case RESET_FILTERS:
             return {
                 ...state,
@@ -120,7 +162,8 @@ function rootReducer(state = initialState, action) {
                 activeFilters: {
                     continent: null,
                     alphabeticalSort: null,
-                    populationSort: null
+                    populationSort: null,
+                    activity: null
                 }
             }
 

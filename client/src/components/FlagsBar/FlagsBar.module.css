@@ -1,0 +1,36 @@
+.flags-container {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.flags-bar {
+  display: flex;
+  animation: moveRight 30s linear infinite;
+  animation-delay: -30s; /* Retraso igual a la duración de la animación para el reinicio */
+  white-space: nowrap; /* Evita que las banderas se rompan en varias líneas */
+  position: relative; /* Agrega posicionamiento relativo */
+  left: 0; /* Inicia desde la posición izquierda */
+}
+
+.flag {
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+  opacity: 1; /* Puedes ajustar la opacidad según tus preferencias */
+  transition: opacity 0.3s;
+  box-shadow: 0 0 10px #C900FF;
+}
+
+.flag.active {
+  opacity: 1; /* La bandera activa tendrá opacidad completa */
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Termina fuera del área visible a la izquierda */
+  }
+}

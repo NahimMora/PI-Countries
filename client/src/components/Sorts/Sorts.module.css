@@ -2,11 +2,11 @@
     background-color: #7b41c5;
     height: 40px;
     margin-top: 15px;
+    margin-right: 10px;
     color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
-    margin-right: 10px;
     font-family: Arial, sans-serif;
     font-size: medium;
     font-weight: bold;
@@ -15,11 +15,11 @@
 }
 
 .sorts button:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Elimina el margen derecho del último botón para que no haya exceso de espacio */
 }
 
 .sorts button:hover {
-    box-shadow: 0 0 5px #C900FF;
+    box-shadow: 0 0 15px #C900FF;
 }
 
 .sorts select {
@@ -36,5 +36,5 @@
 }
 
 .sorts select:hover {
-    box-shadow: 0 0 5px #C900FF;
+    box-shadow: 0 0 15px #C900FF;
 }

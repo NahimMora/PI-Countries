@@ -1,6 +1,148 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
+
+.inputs {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #3c096c;
+  align-items: center;
+  box-shadow: 0 0 20px #C900FF;
+  margin-top: 30px;
+}
+
+.input {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 20px 0;
+
+}
+
+.input label {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  text-shadow: 0 0 10px #C900FF;
+}
+
+.input select, input {
+  background-color: #000;
+  color: #fff;
+  font-weight: bolder;
+  border: 2px solid #C900FF;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.input select option {
+  color: #fff;
+}
+
+.input span {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.create a {
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, text-shadow 0.2s; 
+  margin: 20px;
+  
+}
+
+/* Estilo para los enlaces cuando el mouse está sobre ellos */
+.create a:hover {
+  color: #b892ff;
+  transform: scale(1.05); 
+  text-shadow: 0 0 5px #C900FF;
+  margin: 20px;
+  border-bottom: 2px solid #C900FF; /* Agregar una línea fucsia debajo del texto */
+}
+
+.createActivity:enabled {
+  background-color: #7b41c5; /* Fondo morado */
+  color: #fff; /* Texto blanco */
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #C900FF;
+  margin: 10px 0 20px 0; /* Margen a la derecha para separarlo del resto de elementos */
+}
+
+/* Estilo para el botón cuando está deshabilitado */
+.createActivity:disabled {
+  background-color: #c77dff; /* Fondo morado */
+  color: #e0c3fc; /* Texto blanco */
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones para efectos */
+  margin: 10px 0 20px 0; /* Texto gris cuando está deshabilitado */
+  cursor: not-allowed; /* Cursor de "no permitido" cuando está deshabilitado */
+}
+
+.selectedCountries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 0 0;
+  gap: 10px; /* Espacio entre los países seleccionados */
+}
+
+.selectedCountry {
+  display: flex;
+  align-items: center;
+}
+
+.selectedCountry img {
+  width: 10%; /* Tamaño de la imagen del país */
+}
+
+.selectedCountry div {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  font-weight: bolder;
+  margin-left: 2%;
+  text-shadow: 0 0 10px #C900FF;
+}
+
+.buttonClose {
+  margin-left: 5%;
+  width: 24px; 
+  height: 24px; 
+  background-color: #C900FF; 
+  border: none; 
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
