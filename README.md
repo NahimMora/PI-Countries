@@ -14,6 +14,7 @@ Crear una aplicación web donde se pueda encontrar información básica sobre di
 
 <br />
 ---
+
 ## **📌 TECNOLOGÍAS UTILIZADAS 💻**
 
 En este proyecto, se utilizaron las siguientes tecnologías:
