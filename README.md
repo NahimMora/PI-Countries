@@ -13,6 +13,7 @@ Crear una aplicación web donde se pueda encontrar información básica sobre di
 ✅ Ordenar por población y por orden alfabético de manera ascendente ⬆️ y descendente ⬇️.
 
 <br />
+
 ---
 
 ## **📌 TECNOLOGÍAS UTILIZADAS 💻**
