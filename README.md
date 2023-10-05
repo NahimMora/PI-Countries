@@ -76,11 +76,3 @@ Utilice el administrador de paquetes npm para instalar. (Recuerde usar este coma
        npm start
    ```
 
-<br />
-
----
-
-<br />
-
-![Descripción de la imagen](https://imgur.com/1kEzHNT)
-
