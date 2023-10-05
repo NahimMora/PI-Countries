@@ -82,5 +82,5 @@ Utilice el administrador de paquetes npm para instalar. (Recuerde usar este coma
 
 <br />
 
-[img]https://i.imgur.com/1kEzHNT.png[/img]
+![Descripción de la imagen](https://imgur.com/1kEzHNT)
 
