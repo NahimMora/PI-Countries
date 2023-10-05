@@ -82,4 +82,5 @@ Utilice el administrador de paquetes npm para instalar. (Recuerde usar este coma
 
 <br />
 
-  <img src="./countries.png" />
+![Landing Page](https://imgur.com/a/EOOYzbY)
+
