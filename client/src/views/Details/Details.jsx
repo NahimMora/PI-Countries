@@ -45,8 +45,8 @@ const Details = () => {
       <h3>Continent: {country.continents}</h3>
       <h3>Capital: {country.capital}</h3>
       {country.subregion && <h3>Subregion: {country.subregion}</h3>}
-      {country.area && <h3>Área: {country.area}</h3>}
-      <h3>Population: {country.population}</h3>
+      {country.area && <h3>Área: {Number(country.area).toLocaleString()}</h3>}
+      <h3>Population: {Number(country.population).toLocaleString()}</h3>
       <h3>Lenguaje: {getLanguagesString()}</h3>
       </div>
       <div className={Style.info2}>
