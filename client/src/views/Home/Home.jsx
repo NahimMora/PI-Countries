@@ -19,6 +19,8 @@ const Home = () => {
 
   const activitys = useSelector((state) => state.activitys);
 
+  const continents = ['Africa', 'Europe', 'Oceania', 'Asia', 'South America', 'North America', 'Antarctica']
+
   const activeFilters = useSelector((state) => state.activeFilters);
 
   const page = useSelector((state) => state.currentPage);
@@ -49,8 +51,8 @@ const Home = () => {
 
           <div className={Style.filters}>
 
-            <Filters activitys={activitys} />
-
+            <Filters activitys={activitys} continents={continents}/>
+            <div className={Style.FilterInfo}>
             {isFilterContinent ? (
               <div className={Style.filterActive}>
                 Filter Continent Active: {activeFilters.continent}
@@ -70,13 +72,15 @@ const Home = () => {
                 Filter Activity Inactive
               </div>
             )}
+            </div>
 
           </div>
 
           <div className={Style.sorts}>
 
             <Sorts />
-
+            
+            <div className={Style.SortInfo}>
             {isSortAlphabeticActive ? (
               <div className={Style.filterActive}>
                 Sort Alphabetic Active: {activeFilters.alphabeticalSort}
@@ -96,7 +100,7 @@ const Home = () => {
                 Sort Population Inactive
               </div>
             )}
-
+            </div>
           </div>
 
           <button className={Style.buttonReset} onClick={handleReset}>Reset Filters</button>

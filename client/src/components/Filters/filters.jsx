@@ -4,11 +4,9 @@ import Style from './Filters.module.css'
 import { useDispatch } from 'react-redux'
 import { filterActivity, filterContinent, resetFilters } from '../../redux/actions/actions'
 
-const filters = ({activitys}) => {
+const filters = ({activitys, continents}) => {
 
   const dispatch = useDispatch()
-
-  const continents = ['Africa', 'Europe', 'Oceania', 'Asia', 'South America', 'North America', 'Antarctica']
   
   const handleSelectContinent = (e) => {
       const { value } = e.target

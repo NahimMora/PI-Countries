@@ -1,58 +1,58 @@
 .home {
-    background-color: #10002b;
-    margin: 0%;
-  }
+  background-color: #10002b;
+  margin: 0%;
+}
 
-  .filterSort {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 50px 10px 50px;
-  }
-  
-  .filters,
-  .sorts {
-    margin-right: 50px;
-    list-style: none; /* Elimina los puntos de lista */
-    padding: 0; /* Elimina el relleno por defecto de la lista */
-  }
-  
-  .filters li,
-  .sorts li {
-    text-align: left; /* Alinea el texto a la izquierda dentro de cada elemento de lista */
-  }
-  
-  .filterDesactive {
-    float: left;
-    margin-top: 10px;
-    margin-right: 10%;
-    color: #ecbcfd;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .filterActive {
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    margin-right: 10%;
-    text-shadow: 0 0 20px #c900ff;
-    color: white;
-  }
+.filterSort {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 50px 10px 50px;
+}
 
-  .buttonReset {
-    background-color: #7b41c5;
-    height: 40px;
-    margin-top: 15px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-family: Arial, sans-serif;
-    font-size: medium;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+.filters,
+.sorts {
+  margin-right: 50px;
+  list-style: none; /* Elimina los puntos de lista */
+  padding: 0; /* Elimina el relleno por defecto de la lista */
+}
+
+.filters li,
+.sorts li {
+  text-align: left; /* Alinea el texto a la izquierda dentro de cada elemento de lista */
+}
+
+.filterDesactive {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10%;
+  color: #ecbcfd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.filterActive {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-right: 10%;
+  text-shadow: 0 0 20px #c900ff;
+  color: white;
+}
+
+.buttonReset {
+  background-color: #7b41c5;
+  height: 50px;
+  margin-top: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-family: Arial, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .buttonReset:hover {
-    box-shadow: 0 0 15px #C900FF;
+  box-shadow: 0 0 15px #C900FF;
 }
