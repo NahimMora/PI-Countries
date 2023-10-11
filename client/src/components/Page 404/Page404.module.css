@@ -1,0 +1,9 @@
+.Texto {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 300%;
+    text-shadow: 0 0 20px #c900ff;
+    color: white;
+}

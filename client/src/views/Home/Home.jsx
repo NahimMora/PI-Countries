@@ -10,6 +10,7 @@ import Paginator from '../../components/Paguinator/Paguinator';
 import Sorts from '../../components/Sorts/Sorts';
 import FlagsBar from '../../components/FlagsBar/FlagsBar';
 import Footer from '../../components/Footer/Footer';
+import Page404 from '../../components/Page 404/Page404';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,8 @@ const Home = () => {
   const handleReset = () => {
     dispatch(resetFilters());
   };
+
+  console.log(countries.length);
 
   return (
     <>
@@ -110,6 +113,8 @@ const Home = () => {
         <Paginator page={page + 1} maxPage={maxPage} />
 
         <Cards countries={countries} />
+
+        {countries.length === 0 ? <Page404/> : null}
 
         <Paginator page={page + 1} maxPage={maxPage} />
 
