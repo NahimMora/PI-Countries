@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Style from './Landing.module.css';
 
+import gitImage from '../../assets/github.png'
+import LinkImage from '../../assets/linkedin.png'
+
 const texts = [
   {
     title: "WELCOME",
@@ -15,6 +18,9 @@ const texts = [
     text: "Create your own activities and filter them by country. Customize your experiences and explore a wide range of options based on your preferences and interests."
   }
 ];
+
+const gitHub = 'https://github.com/NahimMora'
+const linkedin = 'https://www.linkedin.com/in/fernando-nahim-mora-456160205/'
 
 const Landing = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);
@@ -33,7 +39,17 @@ const Landing = () => {
         <h1>PI COUNTRIES</h1>
         <p>Discover countries and cultures from around the globe. Explore our planet's diversity </p>
         <p>through key facts, cultural activities, and more. Join our community of explorers today.</p>
-        <a href="/home">Click to home</a>
+        <a className={Style.ClickTo} href="/home">Click to home</a>
+
+        <div className={Style.redSocial}>
+        <a href={gitHub} target="_blank" rel="noopener noreferrer" className={Style.gitLink}>
+          <img src={gitImage} alt="GitHub" className={Style.gitIcon} />
+        </a>
+        <a href={linkedin} target="_blank" rel="noopener noreferrer" className={Style.gitLink}>
+          <img src={LinkImage} alt="Linkedin" className={Style.gitIcon} />
+        </a>
+        </div>
+
       </div>
       <div className={Style.cards}>
         <div className={`${Style.card} ${Style.visible}`}>

@@ -40,13 +40,3 @@ const filters = ({activitys}) => {
 }
 
 export default filters
-
-// const countries = useSelector(state => state.backupCountries);
-
-  // const continents = []
-
-  // countries.forEach(c => {
-  //   continents.push(c.continents);
-  // });
-
-  // const allContinents = [...new Set(continents.flat())];

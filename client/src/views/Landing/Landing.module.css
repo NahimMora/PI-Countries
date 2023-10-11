@@ -26,7 +26,7 @@
   margin: 0;
 }
 
-.h1a a {
+.ClickTo {
   font-family: Arial, sans-serif;
   font-size: larger;
   color: #fff;
@@ -38,7 +38,7 @@
 }
 
 /* Estilo para los enlaces cuando el mouse está sobre ellos */
-.h1a a:hover {
+.ClickTo:hover {
   color: #b892ff;
   transform: scale(1.05); 
   text-shadow: 0 0 5px #C900FF;
@@ -96,4 +96,20 @@
 /* Estilo para tarjetas visibles */
 .visible {
   opacity: 1; /* Opacidad completa cuando es visible */
+}
+
+.redSocial {
+  margin-top: 2%;
+  display: flex;
+}
+
+.gitLink {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gitIcon {
+  width: 40px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 40px;
 }
